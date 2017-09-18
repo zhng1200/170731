@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/170731.iml" filepath="$PROJECT_DIR$/.idea/170731.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../HanhanSpider/.idea/HanhanSpider.iml" filepath="$PROJECT_DIR$/../HanhanSpider/.idea/HanhanSpider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../eventdata2201/.idea/eventdata.iml" filepath="$PROJECT_DIR$/../eventdata2201/.idea/eventdata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../eventdata2202/.idea/eventdata2201.iml" filepath="$PROJECT_DIR$/../eventdata2202/.idea/eventdata2201.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../outproject/.idea/outproject.iml" filepath="$PROJECT_DIR$/../outproject/.idea/outproject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../passiveWarning/.idea/passiveWarning.iml" filepath="$PROJECT_DIR$/../passiveWarning/.idea/passiveWarning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../proactiveWarning/.idea/proactiveWarning.iml" filepath="$PROJECT_DIR$/../proactiveWarning/.idea/proactiveWarning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../textdjango/.idea/textdjango.iml" filepath="$PROJECT_DIR$/../textdjango/.idea/textdjango.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../zhihuScrapy/.idea/zhihuScrapy.iml" filepath="$PROJECT_DIR$/../zhihuScrapy/.idea/zhihuScrapy.iml" />
+    </modules>
+  </component>
+</project>

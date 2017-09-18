@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="text@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="information_schema"/>
+    <schema id="3" parent="1" name="knowledgegraphforfood"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="scrapydb"/>
+    <schema id="6" parent="1" name="text">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="7" parent="1" name="webir">
+      <Visible>1</Visible>
+    </schema>
+    <table id="8" parent="6" name="douban"/>
+    <table id="9" parent="7" name="forummodel"/>
+    <table id="10" parent="7" name="forumreply"/>
+    <table id="11" parent="7" name="forumtopic"/>
+    <table id="12" parent="7" name="material"/>
+    <table id="13" parent="7" name="notice"/>
+    <table id="14" parent="7" name="student"/>
+    <table id="15" parent="7" name="teacher"/>
+    <table id="16" parent="7" name="user"/>
+    <column id="17" parent="8" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="18" parent="8" name="rank">
+      <Position>2</Position>
+      <DataType>VARCHAR(200)|12</DataType>
+    </column>
+    <column id="19" parent="8" name="title">
+      <Position>3</Position>
+      <DataType>VARCHAR(200)|12</DataType>
+    </column>
+    <column id="20" parent="8" name="link">
+      <Position>4</Position>
+      <DataType>VARCHAR(200)|12</DataType>
+    </column>
+    <column id="21" parent="8" name="rate">
+      <Position>5</Position>
+      <DataType>VARCHAR(200)|12</DataType>
+    </column>
+    <column id="22" parent="8" name="quote">
+      <Position>6</Position>
+      <DataType>VARCHAR(200)|12</DataType>
+    </column>
+    <key id="23" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="24" parent="9" name="fm_id">
+      <Position>1</Position>
+      <Comment>模块id</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="25" parent="9" name="fm_time">
+      <Position>2</Position>
+      <Comment>模块时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="26" parent="9" name="fm_name">
+      <Position>3</Position>
+      <Comment>模块名称</Comment>
+      <DataType>VARCHAR(100)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="27" parent="9" name="fm_createuser">
+      <Position>4</Position>
+      <Comment>模块创建人</Comment>
+      <DataType>VARCHAR(100)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="28" parent="9" name="fm_rank">
+      <Position>5</Position>
+      <Comment>模块等级</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="29" parent="9" name="fm_own">
+      <Position>6</Position>
+      <Comment>模块版主</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <key id="30" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>fm_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="31" parent="10" name="fr_id">
+      <Position>1</Position>
+      <Comment>回复id</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="32" parent="10" name="fr_time">
+      <Position>2</Position>
+      <Comment>回复时间</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="33" parent="10" name="fr_content">
+      <Position>3</Position>
+      <Comment>回复内容</Comment>
+      <DataType>TEXT(65535)|-1</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="10" name="fr_replyuser">
+      <Position>4</Position>
+      <Comment>回复人</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="35" parent="10" name="ft_id">
+      <Position>5</Position>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="36" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>fr_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="37" parent="11" name="ft_id">
+      <Position>1</Position>
+      <Comment>主题id</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="38" parent="11" name="ft_time">
+      <Position>2</Position>
+      <Comment>主题时间</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="39" parent="11" name="ft_name">
+      <Position>3</Position>
+      <Comment>主题标题</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="40" parent="11" name="ft_content">
+      <Position>4</Position>
+      <Comment>主题内容</Comment>
+      <DataType>TEXT(65535)|-1</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="11" name="ft_send">
+      <Position>5</Position>
+      <Comment>主题发帖人</Comment>
+      <DataType>VARCHAR(100)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="42" parent="11" name="ft_type">
+      <Position>6</Position>
+      <Comment>主题类型</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="43" parent="11" name="ft_tag">
+      <Position>7</Position>
+      <Comment>主题标签</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="44" parent="11" name="fm_id">
+      <Position>8</Position>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="45" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ft_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="46" parent="12" name="m_id">
+      <Position>1</Position>
+      <Comment>资料id</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="47" parent="12" name="m_name">
+      <Position>2</Position>
+      <Comment>资料名称</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="48" parent="12" name="m_type">
+      <Position>3</Position>
+      <Comment>资料类型</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="49" parent="12" name="m_uploadtime">
+      <Position>4</Position>
+      <Comment>资料上传时间</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="50" parent="12" name="m_downloadnum">
+      <Position>5</Position>
+      <Comment>资料下载次数</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="51" parent="12" name="m_info">
+      <Position>6</Position>
+      <Comment>资料说明</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="52" parent="12" name="m_remark">
+      <Position>7</Position>
+      <Comment>资料标签</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="53" parent="12" name="m_url">
+      <Position>8</Position>
+      <DataType>VARCHAR(400)|12</DataType>
+    </column>
+    <key id="54" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>m_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="55" parent="13" name="n_id">
+      <Position>1</Position>
+      <Comment>公告id</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="56" parent="13" name="n_name">
+      <Position>2</Position>
+      <Comment>公告标题</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="57" parent="13" name="n_time">
+      <Position>3</Position>
+      <Comment>公告时间</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="58" parent="13" name="n_content">
+      <Position>4</Position>
+      <Comment>公告内容</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="59" parent="13" name="n_rank">
+      <Position>5</Position>
+      <Comment>公告等级</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <key id="60" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>n_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="61" parent="14" name="s_id">
+      <Position>1</Position>
+      <Comment>学生id</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="62" parent="14" name="s_num">
+      <Position>2</Position>
+      <Comment>学号</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="63" parent="14" name="s_grade">
+      <Position>3</Position>
+      <Comment>年级</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="64" parent="14" name="s_name">
+      <Position>4</Position>
+      <Comment>姓名</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="65" parent="14" name="s_sex">
+      <Position>5</Position>
+      <Comment>性别</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="66" parent="14" name="s_age">
+      <Position>6</Position>
+      <Comment>年龄</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="67" parent="14" name="s_photo">
+      <Position>7</Position>
+      <Comment>照片</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="68" parent="14" name="s_information">
+      <Position>8</Position>
+      <Comment>个人信息</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="69" parent="14" name="s_search">
+      <Position>9</Position>
+      <Comment>研究方向</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="70" parent="14" name="s_eduexper">
+      <Position>10</Position>
+      <Comment>教育经历</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="71" parent="14" name="s_paperlist">
+      <Position>11</Position>
+      <Comment>论文列表</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="72" parent="14" name="s_email">
+      <Position>12</Position>
+      <Comment>邮箱</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="73" parent="14" name="s_projectlist">
+      <Position>13</Position>
+      <Comment>项目列表</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="74" parent="14" name="s_tel">
+      <Position>14</Position>
+      <Comment>电话</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="75" parent="14" name="s_otherfield">
+      <Position>15</Position>
+      <Comment>其他成果</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="76" parent="14" name="s_award">
+      <Position>16</Position>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <key id="77" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>s_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="78" parent="15" name="t_id">
+      <Position>1</Position>
+      <Comment>教师id</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="79" parent="15" name="t_name">
+      <Position>2</Position>
+      <Comment>姓名</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="80" parent="15" name="t_sex">
+      <Position>3</Position>
+      <Comment>性别</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="81" parent="15" name="t_age">
+      <Position>4</Position>
+      <Comment>年龄</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="82" parent="15" name="t_photo">
+      <Position>5</Position>
+      <Comment>照片</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="83" parent="15" name="t_infomation">
+      <Position>6</Position>
+      <Comment>个人信息</Comment>
+      <DataType>VARCHAR(200)|12</DataType>
+    </column>
+    <column id="84" parent="15" name="t_research">
+      <Position>7</Position>
+      <Comment>研究方向</Comment>
+      <DataType>VARCHAR(200)|12</DataType>
+    </column>
+    <column id="85" parent="15" name="t_paperlist">
+      <Position>8</Position>
+      <Comment>论文列表</Comment>
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="86" parent="15" name="t_projectlist">
+      <Position>9</Position>
+      <Comment>项目列表</Comment>
+      <DataType>VARCHAR(200)|12</DataType>
+    </column>
+    <column id="87" parent="15" name="t_otherfield">
+      <Position>10</Position>
+      <Comment>其他成果</Comment>
+      <DataType>VARCHAR(200)|12</DataType>
+    </column>
+    <column id="88" parent="15" name="t_award">
+      <Position>11</Position>
+      <Comment>奖励</Comment>
+      <DataType>VARCHAR(200)|12</DataType>
+    </column>
+    <column id="89" parent="15" name="t_tel">
+      <Position>12</Position>
+      <Comment>电话</Comment>
+      <DataType>VARCHAR(200)|12</DataType>
+    </column>
+    <column id="90" parent="15" name="t_email">
+      <Position>13</Position>
+      <Comment>邮箱</Comment>
+      <DataType>VARCHAR(200)|12</DataType>
+    </column>
+    <column id="91" parent="15" name="t_eduexper">
+      <Position>14</Position>
+      <Comment>教育经历</Comment>
+      <DataType>VARCHAR(200)|12</DataType>
+    </column>
+    <column id="92" parent="15" name="t_post">
+      <Position>15</Position>
+      <Comment>职称</Comment>
+      <DataType>VARCHAR(200)|12</DataType>
+    </column>
+    <column id="93" parent="15" name="t_teachexper">
+      <Position>16</Position>
+      <DataType>VARCHAR(200)|12</DataType>
+    </column>
+    <key id="94" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>t_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="95" parent="16" name="u_id">
+      <Position>1</Position>
+      <Comment>用户id</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="96" parent="16" name="u_email">
+      <Position>2</Position>
+      <Comment>邮箱</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="97" parent="16" name="u_passwd">
+      <Position>3</Position>
+      <Comment>密码</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="98" parent="16" name="u_name">
+      <Position>4</Position>
+      <Comment>昵称</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="99" parent="16" name="u_re_time">
+      <Position>5</Position>
+      <Comment>注册时间</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="100" parent="16" name="u_type">
+      <Position>6</Position>
+      <Comment>类型</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="101" parent="16" name="u_sex">
+      <Position>7</Position>
+      <Comment>性别</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="102" parent="16" name="u_ip">
+      <Position>8</Position>
+      <Comment>IP</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="103" parent="16" name="u_origin">
+      <Position>9</Position>
+      <Comment>来源</Comment>
+      <DataType>VARCHAR(45)|12</DataType>
+    </column>
+    <column id="104" parent="16" name="fm_id">
+      <Position>10</Position>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="105" parent="16" name="own">
+      <Position>11</Position>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="106" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>u_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
