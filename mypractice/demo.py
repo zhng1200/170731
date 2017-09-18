@@ -16,3 +16,5 @@ if __name__ == "__main__":
     for a0 in range(int(raw_input().strip())):
         result = isBalanced(raw_input().strip())
         print result
+def demo():
+    pass
